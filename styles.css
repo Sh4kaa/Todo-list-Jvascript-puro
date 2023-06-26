@@ -1,0 +1,54 @@
+.main {
+  max-width: 40%;
+  margin: 0 auto;
+  font-family: 'Roboto', 'sans-serif'
+}
+
+.main h1 {
+  text-align:center
+}
+
+.form {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  width: 100%;
+}
+
+.container-input {
+  display: flex;
+  width: 100%; 
+  gap: 5px; 
+}
+
+.form div input {
+  outline: none; 
+  border-radius: 5px;  
+  border: 1px solid black   
+}
+
+.form div input:hover {
+  border: 1px solid orangered 
+}
+
+.input-task {
+  flex: 0 1 70%;
+  height: 30px;
+  font-size: medium;
+  padding-left: 5px
+}
+
+.btn-register {
+  flex: 1;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer
+
+}
+
+.btn-register:hover {
+  background: orangered;
+  color: white;
+  transition: .3s
+}
+
