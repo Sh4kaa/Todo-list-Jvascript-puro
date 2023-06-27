@@ -34,7 +34,8 @@ function editTask(index) {
   const buttonSave = document.createElement("button");
   const itemTask = tasks.childNodes[index];
   buttonSave.textContent = "Salvar";
-  inputTask.type = "text";
+  buttonSave.id = 'save';
+  inputTask.type = "text";  
   inputTask.value = todoList[index];
   buttonSave.onclick = function () {
     todoList[index] = inputTask.value;
