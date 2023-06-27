@@ -19,6 +19,7 @@
   display: flex;
   width: 100%; 
   gap: 5px; 
+  margin-bottom: 40px
 }
 
 .form div input {
@@ -27,28 +28,73 @@
   border: 1px solid black   
 }
 
-.form div input:hover {
-  border: 1px solid orangered 
+.form div input:focus {
+  border: 1px solid orangered;
+  box-shadow: 0px 0px 6px 2px orangered;
+  transition: .3s;
 }
 
 .input-task {
   flex: 0 1 70%;
   height: 30px;
   font-size: medium;
-  padding-left: 5px
+  padding-left: 10px
 }
 
 .btn-register {
   flex: 1;
   border: none;
   border-radius: 5px;
-  cursor: pointer
-
+  cursor: pointer;
+  font-weight: bold;
+  background: orangered;
+  color: white
 }
 
-.btn-register:hover {
-  background: orangered;
-  color: white;
+.btn-register:active {
+  scale: .9;
   transition: .3s
 }
+.tasks, .container-task {
+  width: 100%;
+}
+
+.tasks {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.container-task {
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 5px
+}
+
+.container-task > div {
+  display: flex;
+  gap: 8px
+}
+
+.container-task div button {
+  display: block;
+  padding: 4px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  background: orangered;
+  color: white;
+  height: 33px
+}
+
+.container-task div button:hover {
+  background: orange;
+  scale: 1.2;
+  transition: .3s
+}
+
+
+
+
 

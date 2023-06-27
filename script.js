@@ -2,11 +2,14 @@ const inputTask = document.querySelector(".input-task");
 const tasks = document.querySelector(".tasks");
 const btnRegister = document.querySelector(".btn-register");
 
+
+
 const todoList = [];
 
 function RegisterTask(e) {
-  e.preventDefault()
+  e.preventDefault();
   let task = inputTask.value;
+  if (task === "") alert("Insira uma tarefa");
   if (task !== "") {
     todoList.push(task);
     renderTask();
@@ -18,9 +21,10 @@ function renderTask() {
   tasks.innerHTML = "";
   todoList.map((task, index) => {
     const li = document.createElement("li");
+    li.classList.add('container-task')
     li.innerHTML += `${
       index + 1
-    } - ${task} <button onclick="delTask(${index})">Deletar</button> <button onclick="editTask(${index})">Editar</button>`;
+    } - ${task} <div><button onclick="delTask(${index})"><i class="fa-solid fa-trash"></i></button><button onclick="editTask(${index})"><i class="fa-solid fa-pen-to-square"></i></button></div>`;    
     tasks.appendChild(li);
   });
 }
@@ -46,4 +50,6 @@ function delTask(index) {
   renderTask();
 }
 
+
 btnRegister.addEventListener("click", RegisterTask);
+
